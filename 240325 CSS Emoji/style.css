@@ -1,8 +1,8 @@
-body {
+body{
     background-color: #305dcf;
 }
 
-.emoji {
+.emoji{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -12,7 +12,7 @@ body {
     height: 300px;
     width: 300px;
     background-image: radial-gradient(
-        #feca3e 58%,
+        #feca3a 58%,
         #ff8000 80%
     );
     border-radius: 50%;
@@ -20,7 +20,7 @@ body {
     box-shadow: 30px 30px 35px rgba(0,0,0,0.25);
 }
 
-.eyes{
+.eyes {
     display: flex;
 }
 
@@ -31,15 +31,15 @@ body {
     padding: 18px;
 }
 
-.left {
+.left{
     transform: rotate(-45deg);
     top: 90px;
-    left: 25px;
+    left: 25%;
 }
 
-.right{
+.right {
     transform: rotate(135deg);
-    top: 90%;
+    top: 90px;
     right: 25%;
 }
 
@@ -53,7 +53,7 @@ body {
     right: 0;
     bottom: 25px;
     overflow: hidden;
-    border-radius: 5px 5px 180px 180px;
+    border-radius: 5px 5px 80px 80px;
 }
 
 .teeth{
@@ -65,12 +65,12 @@ body {
     border-radius: 5px 5px 80px 80px;
 }
 
-.thongue {
+.tongue{
     height: 70px;
     width: 105px;
     position: absolute;
     background-color: red;
     border-radius: 50%;
     transform: translate(50%);
-    top: 70px;
+    top: 70%;
 }
