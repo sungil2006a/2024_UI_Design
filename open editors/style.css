@@ -4,18 +4,18 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background: navy;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 
 .container {
     width: 400px;
     aspect-ratio: 2/3;
+
     position: fixed;
     display: flex;
     justify-content: center;
@@ -28,6 +28,7 @@ body {
     width: 280px;
     height: 60%;
     border-radius: 50% 50% 0 0;
+
     display: flex;
     justify-content: center;
     animation: 3s float infinite ease;
@@ -37,7 +38,7 @@ body {
     50% {transform: translateY(-30px);}
 }
 
-.face {
+.face{
     position: relative;
     height: 140px;
     display: flex;
@@ -52,16 +53,16 @@ body {
     justify-content: center;
     gap: 1rem;
 }
+
 .eyes>div{
     width: 50px;
     height: 80px;
     background-color: #444;
-    background-image: radial-gradient(at 35% 35%, white 20%, transparent 20%), 
-    radial-gradient(at 65% 45%, white 10%, transparent 10%);
+    background-image: radial-gradient(at 35% 35%, white 20%, transparent 20%),
+                      radial-gradient(at 65% 45%, white 10%, transparent 10%);
     border-radius: 50%;
     border: 3px solid;
 }
-
 .smile {
     background: pink;
     width: 100px;
@@ -80,7 +81,7 @@ body {
     border-radius: 40px;
     bottom: 0;
     left: 0;
-    transform: translate(55%);
+    transform: translateY(55%);
     box-shadow: 
         calc(40px * 1) 1rem navy,
         calc(40px * 2) -1rem white,
@@ -97,11 +98,10 @@ body {
         box-shadow: 
         calc(40px * 1) 2rem navy,
         calc(40px * 2) 1rem white,
-        calc(40px * 3) -0.5rem navy,
+        calc(40px * 3) -.5rem navy,
         calc(40px * 4) 0rem white,
         calc(40px * 5) 1.5rem navy,
-        calc(40px * 6) -0.5rem white
-        ;
+        calc(40px * 6) -.5rem white
+    ;
     }
 }
-
