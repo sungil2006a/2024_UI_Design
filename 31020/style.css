@@ -1,4 +1,4 @@
-body {
+body{
     margin: 0;
     background: radial-gradient(at 75% 30%, #333554, #131628);
 }
@@ -20,12 +20,12 @@ body {
     border-radius: 100px;
 
     --shadow: -5px 10px 6px -5px rgb(9 11 23 / 30%),
-        -5px 20px 20px -10px rgb(9 11 23 / 30%),
-        -25px 30px 50px -5px rgb(9 11 23 / 50%)
+               5px 20px 20px -10px rgb(9 11 23 / 30%),
+              -25px 30px 50px -5px rgb(9 11 23 / 50%)
 }
 
 .grid::before,
-.icon::before {
+.icon::before{
     content: '';
     position: absolute;
     top: 0;
@@ -40,14 +40,11 @@ body {
     opacity: .2;
 }
 
-
-
-/* SLACK ICON */
-.slack {
+.slack{
     background: #e0e5e2;
-    box-shadow: inset -1px 1px 1px rgb(255 255 255 / 100%),
-        inset 1px -1px 2px rgb(0 0 0 / 30%),
-        var(--shadow);
+    box-shadow: inset -1px 1px 1px rgb(255, 255, 255 / 100%),
+    inset 1px -1px 2px rgb(0 0 0/ 30%),
+    var(--shadow);
 }
 
 .slack > *,
@@ -55,10 +52,10 @@ body {
     position: absolute;
     content: '';
     box-shadow: inset 1px -1px 1px rgb(var(--shadow) / 20%),
-        inset -1px 1px 1px rgb(255 255 255 / 30%),
-        -4px 5px 3px -3px rgb(var(--shadow) / 20%),
-        -10px 15px 10px -5px rgb(var(--shadow) / 15%),
-        -3px 3px 10px 0px rgb(var(--shadow) / 10%);
+    inset -1px 1px 1px rgb(255 255 255 /30%),
+    -4px 5px 3px -3px rgb(var(--shadow) / 20%),
+    -10px 15px 10px -5px rgb(var(--shadow) / 15%),
+    -3px 3px 10px 0px rgb(var(--shadow) / 10%);
 }
 
 .slack div:nth-child(1) {
@@ -91,12 +88,12 @@ body {
     border-radius: 99em;
     translate: 5px calc(-100% - 5px);
 
-    --shadow: 2 48 24;
+    --shadow: 2 40 24;
 }
 
 .slack div:nth-child(2)::before {
     bottom: 0;
-    left: calc(100% + 10px);
+   left: calc(100% + 10px);
     width: 46px;
     aspect-ratio: 1/1;
     background: #41da9a;
@@ -108,10 +105,15 @@ body {
     left: 50%;
     width: 105px;
     height: 46px;
+    background: #ecb434;
+    border-radius: 99em;
+    translate: 5px 5px;
+
+    --shadow: 52 38 8;
 }
 
-.slack div:nth-child(3):before {
-    top: calc(100% + 10%);
+.slack div:nth-child(3)::before {
+    top: calc(100% + 10px);
     left: 0;
     width: 46px;
     aspect-ratio: 1/1;
@@ -126,7 +128,7 @@ body {
     height: 105px;
     background: #e82761;
     border-radius: 99em;
-    transform: calc(-100% - 5px) 5px;
+    translate: calc(-100% -5px) 5px;
 
     --shadow: 73 5 25;
 }
@@ -136,16 +138,9 @@ body {
     top: 0;
     left: calc(-100% - 10px);
     width: 46px;
-    aspect-ratio: 1/1;
+    aspect-ratio:  1/1;
     background: #e82761;
-    border-radius: 50% 4px 50% 50%;
-}
-
-.instagram{
-    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-    box-shadow: inset -1px, 1px 1px rgb(255 255 255 /250%),
-    inset 1px -1px 2px rgb(41 8 51 / 30%),
-    var(--shadow);
+    border-radius: 50% 4pxd 50% 50%;
 }
 
 .instagram > *,
@@ -155,9 +150,8 @@ body {
     content: '';
 }
 
-.instagram div{
-    filter: drop-shadow(-2px 2px 2px rgba(41 8 51 / 100%))
-    drop-shadow(-3px 3px 5px rgba(41 8 51 / 40%));
+.instagram div {
+    filter: drop-shadow(-2px 2px 2px rgba(41 8 51 / 10%)) drop-shadow(-3px 3px 5px rgba(41 8 51 / 40%));
 }
 
 .instagram div:nth-child(1) {
@@ -169,19 +163,19 @@ body {
     box-sizing: border-box;
     box-shadow: inset -5px 5px 8px white,
     inset 1px -1px 8px rgb(60 7 27 / 70%),
-    inset 0 0 0 20px #e0e5e0;
+    inset 0 0 0 20px #e0e5e2;
     translate: -50% -50%;
 }
 
-.instagram div:nth-child(1)::before {
+.instagram div:nth-child(1)::before{
     top: 20px;
     left: 20px;
     width: 190px;
     aspect-ratio: 1/1;
     border-radius: 40px;
     box-sizing: border-box;
-    box-shadow: inset -5px 5px 8px white,
-    inset 1px -1px 8px rgb(41 8 51 / 50%);
+    box-shadow: -5px 5px 8px white,
+    1px -1px 8px rgb(41 8 51 / -50%);
 }
 
 .instagram div:nth-child(2) {
@@ -189,32 +183,32 @@ body {
     left: 50%;
     width: 120px;
     aspect-ratio: 1/1;
-    border-radius: 50px;
+    border-radius: 50%;
     box-sizing: border-box;
     box-shadow: inset -5px 5px 8px white,
     inset 1px -1px 8px rgb(60 7 27 / 70%),
-    inset 0 0 0 20px #e0e5e0;
+    inset 0 0 0 20px #e0e5e2;
     translate: -50% -50%;
 }
 
-.instagram div:nth-child(2)::before {
+.instagram div:nth-child(2)::before{
     top: 20px;
     left: 20px;
     width: 80px;
     aspect-ratio: 1/1;
-    border-radius: 50%;
+    border-radius: 50px;
     box-sizing: border-box;
-    box-shadow: inset -5px 5px 8px white,
+    box-shadow: -5px 5px 8px white,
     1px -1px 8px rgb(60 7 27 / 70%);
 }
 
-.instagram div:nth-child(2)::after {
+.instagram div:nth-child(2)::after{
     top: -15px;
-    left: -15px;
+    right: -15px;
     width: 28px;
     aspect-ratio: 1/1;
-   box-shadow:  inset -5px 5px 8px white
-   inset 1px -1px 8px rgb(60 7 27 / 70%);
-   inset: 0 0 0 20px #e0e5e2;
-   border-radius: 50%;
+    box-shadow: -5px 5px 8px white,
+    1px -1px 8px rgb(60 7 27 / 70%),
+    inset 0 0 0 20px #e0e5e2;
+    border-radius: 50px;
 }
