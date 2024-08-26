@@ -4,24 +4,32 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, rgba(63,122,211,1) 0%, rgba(105,148,211,1) 100%);
+    background: linear-gradient(to right, rgba(63, 122, 211, 1) 0%,
+    rgba(105, 148, 211, 1) 100%);
 }
 
 .panda{
     width: 300px;
     height: 300px;
     background-color: white;
-    border: 12px solid black;
     border-radius: 50%;
     position: relative;
 }
 
-.eye-left,.eye-right,.left-ball,.right-ball,.nose,.mouth,.ear-left,.ear-right{
+.eye-left,
+.eye-right,
+.left-ball,
+.right-ball,
+.nose,
+.mouth,
+.ear-left,
+.ear-right {
     position: absolute;
     background-color: black;
 }
 
-.eye-left,.eye-right{
+.eye-left,
+.eye-right {
     width: 115px;
     height: 58px;
     top: 45%;
@@ -39,7 +47,8 @@ body{
     transform: rotate(-30deg);
 }
 
-.left-ball,.right-ball{
+.left-ball,
+.right-ball{
     width: 30px;
     height: 30px;
     border: 12px solid white;
@@ -48,14 +57,14 @@ body{
 }
 
 .left-ball{
-    left: 30%;
+    left: 32%;
 }
 
-.right-ball{
+.right-ball {
     right: 32%;
 }
 
-.nose{
+.nose {
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -64,7 +73,7 @@ body{
     transform: translateX(-50%);
 }
 
-.mouth{
+.mouth {
     width: 50px;
     height: 10px;
     border-radius: 10px;
@@ -73,7 +82,8 @@ body{
     transform: translateX(-50%);
 }
 
-.ear-left,.ear-right{
+.ear-left,
+.ear-right {
     width: 130px;
     height: 130px;
     border-radius: 50%;
