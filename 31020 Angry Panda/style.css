@@ -1,10 +1,10 @@
-body{
+body {
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(to right, rgba(63, 122, 211, 1) 0%,
+    background: linear-gradient(to right, rgba(63, 122, 211 ,1) 0%,
     rgba(105, 148, 211, 1) 100%);
 }
 
@@ -12,6 +12,7 @@ body{
     width: 300px;
     height: 300px;
     background-color: white;
+    border: 12px solid black;
     border-radius: 50%;
     position: relative;
 }
@@ -37,18 +38,18 @@ body{
     overflow: hidden;
 }
 
-.eye-left {
+.eye-left{
     left: 10px;
     transform: rotate(30deg);
 }
 
-.eye-right{
+.eye-right {
     right: 10px;
     transform: rotate(-30deg);
 }
 
 .left-ball,
-.right-ball{
+.right-ball {
     width: 30px;
     height: 30px;
     border: 12px solid white;
@@ -56,7 +57,7 @@ body{
     border-radius: 50%;
 }
 
-.left-ball{
+.left-ball {
     left: 32%;
 }
 
@@ -95,6 +96,6 @@ body{
     left: -35px;
 }
 
-.ear-right{
+.ear-right {
     right: -35px;
 }
