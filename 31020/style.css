@@ -1,72 +1,96 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before
+*::after{
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
 }
+
+html{}
 
 body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #e3f2fd;
-}
-
-.container{
-    position: relative;
-    background-image: url("imgs/bg.png");
-    background-size: cover;
-    padding: 25px;
-    border-radius: 28px;
-    max-width: 380px;
+    height: 100vh;
     width: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-size: 2vmin;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: #cecdcd;
+
+    background: radial-gradient(circle at center,
+            #9bbdf2,
+            #6a6c8a)   
 }
 
-header
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.mountains{
+    position: relative;
+    height: 40em;
+    width: 33em;
+    border: .7em solid gray;
 
-.logo img{
-    width: 48px;
-    margin-right: 10px;
-}
+    background: 
+        radial-gradient(#FFF 20%,
+            transparent 50%) 15% 10% / 1em 1em, 
 
-h5{
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-}
+        radial-gradient(#FFF 20%,
+            transparent 50%) 20% 40% / 1em 1em,
+            
+        radial-gradient(#FFF 20%,
+            transparent 50%) 50% 5% / 1em 1em,
 
-header .chop{
-    width: 60px;
-}
+        radial-gradient(#FFF 20%,
+            transparent 50%) 55% 12% / 1.5em 1.5em,
 
-h6 {
-    color: #fff;
-    font-size: 10px;
-    font-weight: 400;
-}
+        radial-gradient(#FFF 20%,
+            transparent 50%) right 25% top 20% / 1em 1em,
+    
+        conic-gradient(at 0 20%,
+            transparent 115deg,
+            #41354e 115deg 245deg,
+            transparent 245deg) left 50% bottom -10em / 40em 30em,   
+        
+        conic-gradient(at 100% 0,
+            transparent 135deg,
+            #2d556a 135deg 250deg,
+            transparent 250deg) 0em 16em / 40em 30em,
+        
+        conic-gradient(at 0 20%,
+            transparent 135deg,
+            #6f8695 135deg 225deg,
+            transparent 2225deg) 50% 12em / 35em 30em,
 
-h5.number{
-    margin-top: 4px;
-    font-size: 18px;
-    letter-spacing: 1px;
-}
+        conic-gradient(transparent 135deg,
+            #41354e 135deg 225deg,
+            transparent 225deg) -9em 0em / 25em 30em,
 
-h5.name {
-    margin-top: 20px;
+        linear-gradient(#a6adb7, #dbd1d4 60%);
+        background-repeat: no-repeat;
+        box-shadow: 
+            rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px,
+            rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px,
+            rgba(0, 0, 0, 0.09) 0px 13px 5px;
 }
+       .mountains::before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: #FFF;
+        height: 6em;
+        width: 6em;
+        border-radius: 100%;
+        left: 6em;
+        top: 7em;
+        animation: 3s glow infinite both ease-in-out;
+       }
 
-.container .card-details{
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
+       @keyframes glow{
+        0%,
+        100% {
+            box-shadow: 0 0 5em .25em #FFF;
+        }
+        50% { box-shadow: 0 0 5em #FFF;
+
+        }
+       }
