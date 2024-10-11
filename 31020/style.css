@@ -1,96 +1,167 @@
-*,
-*::before
-*::after{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+:root {
+    --size: 50vmin;
+    --bg: black;
+    --logo: white;
 }
 
-html{}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
 
-body{
-    height: 100vh;
-    width: 100%;
-    font-size: 2vmin;
+.github {
+    width: var(--size);
+    aspect-ratio: 1;
+    background: var(--bg);
+    border-radius: 50%;
     position: relative;
     display: grid;
     place-items: center;
-    background: #cecdcd;
-
-    background: radial-gradient(circle at center,
-            #9bbdf2,
-            #6a6c8a)   
 }
 
-.mountains{
-    position: relative;
-    height: 40em;
-    width: 33em;
-    border: .7em solid gray;
-
-    background: 
-        radial-gradient(#FFF 20%,
-            transparent 50%) 15% 10% / 1em 1em, 
-
-        radial-gradient(#FFF 20%,
-            transparent 50%) 20% 40% / 1em 1em,
-            
-        radial-gradient(#FFF 20%,
-            transparent 50%) 50% 5% / 1em 1em,
-
-        radial-gradient(#FFF 20%,
-            transparent 50%) 55% 12% / 1.5em 1.5em,
-
-        radial-gradient(#FFF 20%,
-            transparent 50%) right 25% top 20% / 1em 1em,
-    
-        conic-gradient(at 0 20%,
-            transparent 115deg,
-            #41354e 115deg 245deg,
-            transparent 245deg) left 50% bottom -10em / 40em 30em,   
-        
-        conic-gradient(at 100% 0,
-            transparent 135deg,
-            #2d556a 135deg 250deg,
-            transparent 250deg) 0em 16em / 40em 30em,
-        
-        conic-gradient(at 0 20%,
-            transparent 135deg,
-            #6f8695 135deg 225deg,
-            transparent 2225deg) 50% 12em / 35em 30em,
-
-        conic-gradient(transparent 135deg,
-            #41354e 135deg 225deg,
-            transparent 225deg) -9em 0em / 25em 30em,
-
-        linear-gradient(#a6adb7, #dbd1d4 60%);
-        background-repeat: no-repeat;
-        box-shadow: 
-            rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px,
-            rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px,
-            rgba(0, 0, 0, 0.09) 0px 13px 5px;
+.github .head {
+    width: 64%;
+    height: 48%;
+    background: var(--logo);
+    position: absolute;
+    top: 24%;
+    border-radius: 50% 49% 40% 40%/45% 45% 45% 45%;
 }
-       .mountains::before{
-        content: '';
-        display: block;
-        position: absolute;
-        background: #FFF;
-        height: 6em;
-        width: 6em;
-        border-radius: 100%;
-        left: 6em;
-        top: 7em;
-        animation: 3s glow infinite both ease-in-out;
-       }
 
-       @keyframes glow{
-        0%,
-        100% {
-            box-shadow: 0 0 5em .25em #FFF;
-        }
-        50% { box-shadow: 0 0 5em #FFF;
+.github .head .ear{
+    position: absolute;
+    background: var(--logo);
+    border-radius: 0% 56% 20% 80%;
+    top: -2%;
+    width: 32%;
+    height: 40%;
+}
 
-        }
-       }
+.github .head .ear-left:before, .github .head .ear-right:before{
+    content: "";
+    position: absolute;
+    background: var(--logo);
+    border-radius: 50%;
+    width: 62%;
+    height: 15%;
+    transform: rotate(4deg);
+    top: -4%;
+}
+
+.github .head .ear-left{
+    left: 4%;
+    transform: rotate(16deg);
+}
+
+.github .head .ear-right {
+    right: 4%;
+    transform: rotate(345deg) scaleX(-1);
+}
+
+.github .body{
+    background: var(--logo);
+    width: 25%;
+    height: 35%;
+    bottom: -4%;
+    position: absolute;
+    border-radius: 34%;
+}
+
+.github .body::before, .github .body:after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: var(--bg);
+    bottom: 18%;
+    border-radius: 50%;
+}
+
+.github .body:before{
+    left: -32%;
+    transform: rotate(327deg);
+    z-index: 1;
+}
+
+.github .body:after{
+    border-radius: 50%;
+    right: -32%;
+    transform: rotate(33deg);
+}
+
+.github .body .bottom{
+    position: var(--logo);
+    width: 130%;
+    height: 20%;
+    bottom: 10%;
+    left: -15%;
+}
+
+.github .tail {
+    break-before: 50%;
+    position: absolute;
+    width: 22%;
+    height: 13%;
+    background-color: var(--logo);
+    bottom: 14%;
+    left: 21%;
+}
+
+.github .tail::before .github .tail:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.github .tailL::before {
+    width: 100%;
+    height: 100%;
+    bottom: 64%;
+    left: 10%;
+    background: var(--bg);
+    transform: rotate(337deg);
+}
+
+.github .tail:after{
+    width: 19%;
+    height: 52%;
+    transform: rotate(327deg);
+    bottom: 13%;
+    left: 2%;
+    background: var(--logo);
+}
+
+.github .tail .tip{
+    width: 36%;
+    height: 110%;
+    position: absolute;
+    background: var(--logo);
+    border-radius: 50%;
+    left: -25%;
+    top: -35%;
+    transform: rotate(322deg);
+}
+
+.github .tail .tip::before, .github .tail.tip:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.github .tail .tip::before{
+    width: 43%;
+    height: 41%;
+    background: var(--logo);
+    transform: rotate(325deg);
+    top: -9%;
+    left: 35%;
+}
+
+.github .tail .tip:after{
+    width: 45%;
+    height: 103%;
+    background: var(--bg);
+    top: -6%;
+    left: -6%;
+}
