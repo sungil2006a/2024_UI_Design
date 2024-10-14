@@ -1,168 +1,151 @@
-:root {
-    --size: 50vmin;
-    --bg: black;
-    --logo: white;
-}
-
-body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-}
-
-.github {
-    width: var(--size);
-    aspect-ratio: 1;
-    background: var(--bg);
-    border-radius: 50%;
-    position: relative;
-    display: grid;
-    place-items: center;
-}
-
-.github .head{
-    width: 64%;
-    height: 48%;
-    background: var(--logo);
+.cartoon {
     position: absolute;
-    top: 24%;
-    border-radius: 50% 49% 40% 40%/45% 45% 45% 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vmin;
+    height: 60vmin;
 }
 
-.github .head .ear{
+.cartoon div {
     position: absolute;
-    background: var(--logo);
-    border-radius: 0% 56% 20% 80%;
-    top: -2%;
-    width: 32%;
+    box-sizing: border-box;
+}
+
+.b {
+    border: 1vmin solid;
+}
+
+.r {
+    border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+html,
+body{
+    --dark: #346;
+    --light: #6ce;
+    --white: #def;
+    background: var(--light);
+    overflow: hidden;
+}
+
+.body {
+    width: 80%;
     height: 40%;
+    top: 10%;
+    left: 0;
+    border-radius: 0 10% 50% 0 / 100%;
+    box-shadow: 4.6vmin 6vmin 0 4vmin var(--dark), 4vmin 13vmin 0 9.5vmin var(--dark);
+    clip-path: polygon(50% -200%, 200% -200%, 200% 200%, 50% 200%);
 }
 
-.github .head .ear-left:before, .github .head .ear-right::before {
-    content: "";
-    position: absolute;
-    background: var(--logo);
-    border-radius: 50%;
-    width: 62%;
-    height: 15%;
-    transform: rotate(4deg);
-    top: -4%;
+.body::before,
+.body::after{
+    width: 16vmin;
+    height: 10vmin;
+    background: var(--dark);
+    border-radius: 0 14vmin 0 14vmin;
+    top: -3vmin;
+    right: -2.5vmin;
+    transform: rotate(-10deg);
 }
 
-.github .head .ear-left {
-    left: 4%;
-    transform: rotate(16deg);
+.bodey::before{
+    border-radius: 14vmin 0 14vmin 0;
+    right: -17vmin;
+    top: -5.5vmin;
 }
 
-.github .head .ear-right{
-    right: 4%;
-    transform: rotate(345deg) scaleX(-1);
+.mouth{
+    width: 92.5%;
+    height: 46%;
+    border-radius: 20vmin 0 100vmin 100vmin;
+    top: 50%;
+    left: 0;
+    background: var(--dark);
+    overflow: hidden;
 }
 
-.github .body {
-    background: var(--logo);
-    width: 25%;
-    height: 35%;
-    bottom: -4%;
-    position: absolute;
-    border-radius: 34%;
+.mouth::before {
+    width: 75%;
+    height: 200%;
+    background: var(--white);
+    border-radius: 0 40% 50% 0;
+    top: 20%;
+    left: -30%;
+    border: 0.5vmin solid var(--light);
+    box-sizing: border-box;
 }
 
-.github .body::before, .github .body:after{
-    content: "";
-    position: absolute;
-    width: 30%;
+.mouth::after {
+    width: 80%;
+    left: 10%;
     height: 30%;
-    background: var(--bg);
-    bottom: 18%;
-    border-radius: 50%;
+    border-radius: 100%;
+    top: 55%;
+    box-shadow: 0 0.5cmin var(--light), 0 10vmin 0 7vmin var(--white);
+    clip-path: polygon(42% 0%, 100% 0%, 100% 500%, 42% 500%);
 }
 
-.github .body:before {
-    left: -32%;
-    transform: rotate(327deg);
-    z-index: 1;
+.fin {
+    width: 15%;
+    height: 40%;
+    background: var(--dark);
+    border-radius: 0 100%;
+    top: 78%;
+    left: 42.75%;
+    clip-path: polygon(0% 10%, 100% 10%, 100% 100%, 0% 100%);
+    box-shadow: inset 0.25vmin 0 var(--light);
+    background: linear-gradient(80deg, var(--light) 5%, var(--dark) 0);
+    transform: rotate(-12deg);
 }
 
-.github .body::after{
-    border-radius: 50%;
-    right: -32%;
-    transform: rotate(33deg);
+.fin-back {
+    transform: rotate(-30deg);
+    left: 45%;
 }
 
-.github .body .bottom{
-    position: absolute;
-    background: var(--logo);
-    width: 130%;
-    height: 20%;
-    bottom: 10%;
-    left: -15%;
+.eye {
+    aborder-color: transparent;
+    aborder-top-color: var(--white);
+    aborder-right-color: var(--white);
+    border-width: 0.5vmin;
+    width: 3%;
+    height: 3%;
+    top: 63%;
+    left: 33%;
+    background: var(--white);
+    color: var(--white);
 }
 
-.github .tail{
-    border-radius: 50%;
-    position: absolute;
-    width: 22%;
-    height: 13%;
-    background: var(--logo);
-    bottom: 14%;
-    left: 21%;
+.mouth-lines{
+    width: 80.5%;
+    height: 85%;
+    border-radius: 37% 37% 37% 55%;
+    left: -40%;
+    top: 59.5%;
+    overflow: hidden;
 }
 
-.github .tail::before .gitub .tail:after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-.github .tail::before {
+.mouth-lines::before,
+.mouth-lines:after {
     width: 100%;
     height: 100%;
-    bottom: 64%;
-    left: 10%;
-    background: var(--bg);
-    transform: rotate(337deg);
-}
-
-.github .tail:after{
-    width: 19%;
-    height: 52%;
-    transform: rotate(327deg);
-    bottom: 13%;
-    left: 2%;
-    background: var(--logo);
-}
-
-.github .tail .tip{
-    width: 36%;
-    height: 110%;
-    position: absolute;
-    background: var(--logo);
+    border: 0.5vmin solid var(--light);
     border-radius: 50%;
-    left: -25%;
-    top: -35%;
-    transform: rotate(332deg);
+    top: -65.75%;
+    left: 55%;
 }
 
-.github .tail .tip:before, .github .tail .tip:after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-.github .tail .tip::before {
-    width: 43%;
-    height: 41%;
-    background: var(--logo);
-    transform: rotate(325deg);
-    top: -9%;
-    left: 35%;
-}
-
-.github .tail .tip:after{
-    width: 45%;
-    height: 103%;
-    background: var(--bg);
-    top: -6%;
-    left: -6%;
+.mouth-lines:after {
+    border: 0.4vmin solid var(--light);
+    top: -72%;
+    left: 62%;
 }
