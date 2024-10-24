@@ -1,96 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    width: 100%;
-    height: 100vh;
-    background: #555555;
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #000;
+}
+
+.center{
     display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
-.container{
-    width: 460px;
-    padding: 40px;
-    background: #ffffff;
-    text-align: center;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow:  0 0 15px rgba(0,0,0, 0.05);
+.outer{
     position: relative;
+    margin: 0 50px; 
+    background: #111;
 }
 
-.container .title {
-    font-size: 2rem;
-    color: #333;
+.button{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
 }
 
-.container .price{
-    color: #ff6b6b;
-    font-weight: 700;
-    font-size: 15px 0;
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
-.container span{
-    font-size: 1.2rem;
+.outer button, .outer span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.container .description{
-    color: #3b3b3b;
-    font-size: 1.1rem;
-    margin: 20px 0 20px;
+.outer button{
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    z-index: 9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.container .offer{
-    display: block;
-    color: #555;
-    font-size: 1rem;
-    margin-top: 25px;
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50%;
 }
 
-.subscribe-button{
-    display: inline-block;
-    padding: 15px 0;
-    background-color: #ff6b6b;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    margin-top: 40px;
+.circle button {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.outer span{
+    height: 100%;
     width: 100%;
-    font-weight: 500;
-    transition: 0.2s ease;
+    background: inherit;
 }
 
-.subscribe-button:hover{
-    background: #ff4d4d;
+.button span{
+    border-radius: 50px;
 }
 
-.ribbon-wrap{
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    pointer-events: none;
+.circle span {
+    border-radius: 50%;
 }
 
-.ribbon{
-    width: 230px;
-    font-size: 0.918rem;
-    text-align: center;
-    padding: 8px 0;
-    background: #ff6b6b;
-    color: #fff;
-    position: absolute;
-    transform: rotate(-45deg);
-    right: -17px;
-    top: 29%;
+.outer:hover span:nth-child(1){
+    filter: blur(7px);
+}
+
+.outer:hover span:nth-child(2){
+    filter: blur(14px);
+}
+
+.outer:hover{
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+@media(max-width: 640px) {
+    .center{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .outer{
+        margin: 50px 0;
+    }
 }
