@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login Form HTML CSS</title>
+    <title>Login Form Design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <div class="title"><span>Login Form</span></div>
+        <div class="title">
+            Login form
+        </div>
         <form action="#">
-            <div class="row">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Email or Phone" required />
+            <div class="field">
+                <label>Email Address</label>
             </div>
-            <div class="row">
-                <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" required />
+            <div class="field">
+                <input type="password" required>
+                <label>Password</label>
             </div>
-            <div class="pass"><a href="#">Forgot password?</a></div>
-            <div class="row button">
-                <input type="submit" value="Login" />
+            <div class="content">
+                <div class="checkbox">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <div class="pass-link">
+                    <a href="">Forgot password?</a>
+                </div>
             </div>
-            <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">
+                Not a member? <a href="#">Signup now</a>
+            </div>
         </form>
     </div>
 </body>

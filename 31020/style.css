@@ -1,125 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-* {
+*{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 15px;
-    background: #1abc9c;
-    overflow: hidden;
-}
-
-.wrapper {
-    max-width: 500px;
+html,body{
+    display: grid;
+    height: 100%;
     width: 100%;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.1);
+    place-items: center;
+    background: #f2f2f2;
 }
 
-.wrapper .title {
-    height: 120px;
-    background: #16a085;
-    border-radius: 5px 5px 0 0;
+::selection{
+    background: #4158d0;
     color: #fff;
-    font-size: 30px;
+}
+
+.wrapper{
+    width: 380px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.wrapper .title{
+    font-size: 35px;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-.wrapper form {
-    padding: 25px 35px;
+.wrapper form{
+    padding: 10px 30px 50px 30px;
 }
 
-.wrapper form .row {
-    height: 60px;
-    margin-top: 15px;
+.wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
     position: relative;
 }
 
-.wrapper form .row input {
+.wrapper form .field input {
     height: 100%;
     width: 100%;
     outline: none;
-    padding-left: 70px;
-    border-radius: 5px;
+    font-size: 17px;
+    padding-left: 20px;
     border: 1px solid lightgray;
-    font-size: 18px;
+    border-radius: 25px;
+    transform: all 0.3s ease;
+}
+
+.wrapper form .field input:focus,
+form .field input:valid{
+    border-color: #4158d0;
+}
+
+.wrapper form .field label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: #999999;
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
     transition: all 0.3s ease;
 }
 
-form .row input:focus {
-    border-color: #16a085;
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
 }
 
-form .row input::placeholder {
-    color: #999;
+form .content{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.wrapper form .row i {
-    position: absolute;
-    width: 55px;
-    height: 100%;
-    color: #fff;
-    font-size: 22px;
-    background: #16a085;
-    border: 1px solid #16a085;
-    border-radius: 5px 0 0 5px;
+form .content .checkbox{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.wrapper form .pass {
-    margin-top: 12px;
+form .content input {
+    width: 15px;
+    height: 15px;
+    background: red;
 }
 
-.wrapper form .pass a {
-    color: #16a085;
-    font-size: 17px;
-    text-decoration: none;
+form .content label {
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
 }
 
-.wrapper form .pass a:hover {
-    text-decoration: underline;
+form .content .pass-link{
+    color: "";
 }
 
-.wrapper form .button input {
-    margin-top: 20px;
+form .field input[type="submit"]{
     color: #fff;
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
     font-size: 20px;
     font-weight: 500;
-    padding-left: 0px;
-    background: #16a085;
-    border: 1px solid #16a085;
     cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transform: all 0.3s ease;
 }
 
-form .button:hover {
-    background: #12876f;
+form .field input[type="submit"]:active{
+    transform: scale(0.95);
 }
 
-.wrapper form .sigrup-link {
+form .signup-link{
+    color: #262626;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 45px;
-    font-size: 17px;
 }
 
-.wrapper form .sigrup-link a {
-    color: #16a085;
-    text-decoration: none;
+form .pass-link a,
+form .signup-link a{
+    color: #4158d0;
+   text-decoration: none;
 }
 
-form .sigrup-link a:hover {
+form .pass-link a:hover,
+form .signup-link a:hover{
     text-decoration: underline;
 }
