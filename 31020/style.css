@@ -12,7 +12,7 @@ html,body{
     height: 100%;
     width: 100%;
     place-items: center;
-    background: #f2f2f2;
+    background: #f2f2f2
 }
 
 ::selection{
@@ -49,7 +49,7 @@ html,body{
     position: relative;
 }
 
-.wrapper form .field input {
+.wrapper form .field input{
     height: 100%;
     width: 100%;
     outline: none;
@@ -57,12 +57,7 @@ html,body{
     padding-left: 20px;
     border: 1px solid lightgray;
     border-radius: 25px;
-    transform: all 0.3s ease;
-}
-
-.wrapper form .field input:focus,
-form .field input:valid{
-    border-color: #4158d0;
+    transition: all 0.3s ease;
 }
 
 .wrapper form .field label{
@@ -70,7 +65,6 @@ form .field input:valid{
     top: 50%;
     left: 20px;
     color: #999999;
-    font-weight: 400;
     font-size: 17px;
     pointer-events: none;
     transform: translateY(-50%);
@@ -101,19 +95,19 @@ form .content .checkbox{
     justify-content: center;
 }
 
-form .content input {
+form .content .input{
     width: 15px;
     height: 15px;
     background: red;
 }
 
-form .content label {
+form .content label{
     color: #262626;
     user-select: none;
     padding-left: 5px;
 }
 
-form .content .pass-link{
+form .content .pass-link {
     color: "";
 }
 
@@ -126,7 +120,6 @@ form .field input[type="submit"]{
     font-weight: 500;
     cursor: pointer;
     background: linear-gradient(-135deg, #c850c0, #4158d0);
-    transform: all 0.3s ease;
 }
 
 form .field input[type="submit"]:active{
@@ -142,7 +135,7 @@ form .signup-link{
 form .pass-link a,
 form .signup-link a{
     color: #4158d0;
-   text-decoration: none;
+    text-decoration: none;
 }
 
 form .pass-link a:hover,
